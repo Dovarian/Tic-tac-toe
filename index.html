@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./dil/game/script.js" defer></script>
+    <script src="./dil/nav/script.js" defer></script>
+    <script src="./dil/settings/script.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Крестики-нолики</title>
+  </head>
+  <body>
+    <header>
+      <h1>Крестики-нолики</h1>
+    </header>
+    <main>
+      <div id="menu" style="display: none;">
+        <button class="nav">Играть</button>
+        <button class="settings-button">Настройки</button>
+      </div>
+      <div id="game">
+        <button id="play-again">Играть снова</button>
+        <button class="nav">Назад</button>
+        <table>
+          <tr>
+            <td class="empy"></td>
+            <td class="column empy"></td>
+            <td class="empy"></td>
+          </tr>
+          <tr>
+            <td class="empy"></td>
+            <td class="column empy"></td>
+            <td class="empy"></td>
+          </tr>
+          <tr>
+            <td class="empy"></td>
+            <td class="column empy"></td>
+            <td class="empy"></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <div id="settings">
+      Тема: 
+      <div class="form">
+        <input type="radio" id="light-theme" name="theme" class="theme" checked>
+        <label for="light-theme">Светлая</label>
+      </div>
+      <div class="form">
+        <input type="radio" id="dark-theme" name="theme" class="theme">
+        <label for="dark-theme">Темная</label>
+      </div><br><br>
+      Громкость: <input type="range" min="0" max="100" class="volume" id="volume"><br><br>
+      <button class="settings-button">Назад</button>
+    </div>
+    <audio src="./audio/tap.mp3" id="tap-sound"></audio>
+    <audio src="./audio/win.mp3" id="win-sound"></audio>
+    <audio src="./audio/btn.mp3" id="btn-sound"></audio>
+  </body>
+</html>

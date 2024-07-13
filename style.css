@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --background-color: #f8f9fa;
+    --grid-color: #ced4da;
+    --text-color: #212529;
+    --play-btn-color: #55ff55;
+    --play-btn-hover-color: #46e746;
+    --settings-btn-color: #cfcfcf;
+    --settings-btn-hover-color: #c0c0c0;
+    --settings-background-color: #cfcfcf;
+}
+*{
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+body{
+    background-color: var(--background-color);
+    font-family: "Inter", sans-serif;
+    background-image: linear-gradient(0deg, var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 4vh 4vh;
+}
+header h1{
+    font-size: 6vh;
+    text-align: center;
+}
+main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 35vw;
+}
+button{
+    display: block;
+    text-align: center;
+    padding: 2vh;
+    font-size: 3.5vh;
+    width: 35vw;
+    transition: 0.25s;
+    cursor: pointer;
+    user-select: none;
+    border: gray 0.1vh solid;
+}
+main button:first-child{
+    margin-bottom: 2vh;
+    background-color: var(--play-btn-color);
+}
+main button:first-child:hover{
+    background-color: var(--play-btn-hover-color);
+}
+#menu button:last-child{
+    background-color: var(--settings-btn-color);
+}
+#menu button:last-child:hover{
+    background-color: var(--settings-btn-hover-color);
+}
+#game button:nth-child(2){
+    background-color: rgb(207, 207, 207);
+    color: black;
+}
+#game button:nth-child(2):hover{
+    background-color: rgb(182, 182, 182);
+}
+#settings{
+    background-color: var(--settings-background-color);
+    display: none;
+    position: absolute;
+    height: 50vh;
+    margin-top: 11vh;
+    font-size: 3.5vh;
+    top: 0;
+    left: 30vw;
+    right: 30vw;
+    padding: 2vh;
+    border: 0.1vh solid grey;
+    opacity: 0.9;
+}
+#settings button{
+    width: 100%;
+    margin-top: 19vh;
+    color: black;
+}
+#settings button:hover{
+    background-color: rgb(255, 255, 255);
+}
+#settings input[type=radio]{
+    display: none;
+}
+#settings .form{
+    display: inline;
+}
+#settings label{
+    background-color: white;
+    padding: 1vh;
+    display: inline-block;
+	cursor: pointer;
+	border: 1px solid #999;
+	border-radius: 0.5vh;
+	user-select: none;
+    transition: 0.1s;
+    color: black
+}
+#settings .form input[type=radio]:checked + label {
+	background: #ffe0a6;
+}
+#settings .form label:hover {
+	color: #6d6d6d;
+}
+#settings input[type=range]{
+    appearance: none;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity .2s;
+    width: 20vw;
+    height: 3vh;
+}
+#settings input[type=range]:hover{
+    opacity: 1;
+}
+#settings input[type=range]::-webkit-slider-thumb{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #ffe0a6;
+    cursor: pointer;
+}
+#settings input[type=range]::-moz-range-thumb{    
+    width: 25px;
+    height: 25px;
+    background: #ffe0a6;
+    cursor: pointer;
+    color: #565d64;
+}
+table{ 
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0;
+    border-collapse: collapse;
+    table-layout:fixed;
+    width: 30vw;
+    height: 30vw;
+    border: var(--settings-background-color) solid 0.4vh;
+    user-select: none;
+}
+tr:nth-child(2){
+    border-top: solid var(--settings-background-color) 0.4vh;
+    border-bottom: solid var(--settings-background-color) 0.4vh;
+}
+.column{
+    border-left: solid var(--settings-background-color) 0.4vh;
+    border-right: solid var(--settings-background-color) 0.4vh;
+}
+td{
+    font-size: 12vh;
+    text-align: center;
+    cursor: pointer;
+    height: 10vw;
+    width: 10vw;
+}
+.empy{
+    opacity: 0;
+    background-color: gray;
+    transition: 0.15s;
+}
+.empy:hover{
+    opacity: 0.3;
+}
+.win-cell{
+    background-color: #46e746;
+}
